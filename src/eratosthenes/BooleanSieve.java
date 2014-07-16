@@ -4,12 +4,12 @@ public class BooleanSieve
 {
 	
 	private static final String
-		INFO_SIEVEMEMORY = "The sieve will require a minimum of %s of memory.\n",
-		ERR_MAXVALUE = "You should never see this. Though the maximum value this implementation can " +
-				"handle is 36,893,488,113,059,364,872; the maximum value a 64-bit signed long can " +
-				"have is 9,223,372,036,854,775,807.",
-		ERR_MEMORY = "The JVM does not have enough memory available to complete this computation.",
-		ERR_SIZEMATTERS = "A calculation cannot be completed on integers less than or equal to 1.";
+		INFO_SIEVEMEMORY 	= "The sieve will require a minimum of %s of memory.\n",
+		ERR_MAXVALUE 		= "The maximum value this implementation can handle is 4,294,967,294, though it " +
+							  "is doubtful that the JVM will be able to allocate an array large enough for " +
+							  "such a value.",
+		ERR_MEMORY 			= "The JVM does not have enough memory available to complete this computation.",
+		ERR_SIZEMATTERS 	= "The calculation cannot be completed on integers less than 2.";
 	
 	public static void main(String[] args) 
 	{
@@ -18,7 +18,7 @@ public class BooleanSieve
 		System.out.println("[JVM] Memory Free:   " + getNamedSize(Runtime.getRuntime().freeMemory()));
 		System.out.println();
 		
-		booleanSieve(Integer.MAX_VALUE / 2);
+		booleanSieve(Integer.MAX_VALUE);
 	}
 	
 	private static void booleanSieve(long maxValue)

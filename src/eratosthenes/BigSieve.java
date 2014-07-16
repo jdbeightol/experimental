@@ -10,13 +10,13 @@ public class BigSieve
 	private static final int MAX_CHUNK_SIZE = 536870912;	// 512 MB
 	
 	private static final String
-		INFO_SIEVEMEMORY = "The sieve will require a minimum of %s of memory (%dx%s).\n",
-		ERR_MAXVALUE = "You should never see this. Though the maximum value this implementation can " +
-				"handle is 36,893,488,113,059,364,872; the maximum value a 64-bit signed long can " +
-				"have is 9,223,372,036,854,775,807.",
-		ERR_CHUNK = "The arrays cannot be initialized. Please increase the MAX_CHUNK_SIZE.",
-		ERR_MEMORY = "The JVM does not have enough memory available to complete this computation.",
-		ERR_SIZEMATTERS = "A calculation cannot be completed on integers less than or equal to 1.";
+		INFO_SIEVEMEMORY	= "The sieve will require a minimum of %s of memory (%dx%s).\n",
+		ERR_MAXVALUE 		= "You should never see this. Though the maximum value this implementation can " +
+							  "handle is 36,893,488,113,059,364,872; the maximum value a 64-bit signed long can " +
+							  "have is 9,223,372,036,854,775,807.",
+		ERR_CHUNK 			= "The arrays cannot be initialized. Please increase the MAX_CHUNK_SIZE.",
+		ERR_MEMORY 			= "The JVM does not have enough memory available to complete this computation.",
+		ERR_SIZEMATTERS 	= "The calculation cannot be completed on integers less than 2.";
 	
 	public static void main(String[] args) 
 	{
