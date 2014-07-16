@@ -2,12 +2,15 @@ package eratosthenes;
 
 public class BigSieve 
 {
-//	private static final int MAX_CHUNK_SIZE = 16777216;		// 16  MB
-//	private static final int MAX_CHUNK_SIZE = 33554432;		// 32  MB
-//	private static final int MAX_CHUNK_SIZE = 67108864;		// 64  MB 
-//	private static final int MAX_CHUNK_SIZE = 134217728;	// 128 MB
-//	private static final int MAX_CHUNK_SIZE = 268435456;	// 256 MB
-	private static final int MAX_CHUNK_SIZE = 536870912;	// 512 MB
+//	private static final int MAX_CHUNK_SIZE = 16777216;		// 16	MB
+//	private static final int MAX_CHUNK_SIZE = 33554432;		// 32	MB
+	private static final int MAX_CHUNK_SIZE = 67108864;		// 64	MB 
+//	private static final int MAX_CHUNK_SIZE = 134217728;	// 128	MB
+//	private static final int MAX_CHUNK_SIZE = 268435456;	// 256	MB
+//	private static final int MAX_CHUNK_SIZE = 536870912;	// 512	MB
+//	private static final int MAX_CHUNK_SIZE = 1073741824;	// 1	GB
+//	private static final int MAX_CHUNK_SIZE = 2147483647;	// 2	GB (Integer.MAX_VALUE: Technically 1 byte short of 2GB.) 
+	
 	
 	private static final String
 		INFO_SIEVEMEMORY	= "The sieve will require a minimum of %s of memory (%dx%s).\n",
@@ -25,7 +28,7 @@ public class BigSieve
 		System.out.println("[JVM] Memory Free:   " + getNamedSize(Runtime.getRuntime().freeMemory()));
 		System.out.println();
 		
-		bigSieve(Integer.MAX_VALUE + 1L);
+		bigSieve(Integer.MAX_VALUE + 2L);
 	}
 	
 	private static void bigSieve(long maxValue)

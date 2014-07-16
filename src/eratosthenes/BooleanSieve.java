@@ -1,8 +1,7 @@
 package eratosthenes;
 
 public class BooleanSieve 
-{
-	
+{	
 	private static final String
 		INFO_SIEVEMEMORY 	= "The sieve will require a minimum of %s of memory.\n",
 		ERR_MAXVALUE 		= "The maximum value this implementation can handle is 4,294,967,294, though it " +
@@ -18,7 +17,7 @@ public class BooleanSieve
 		System.out.println("[JVM] Memory Free:   " + getNamedSize(Runtime.getRuntime().freeMemory()));
 		System.out.println();
 		
-		booleanSieve(Integer.MAX_VALUE);
+		booleanSieve(Integer.MAX_VALUE + 1L);
 	}
 	
 	private static void booleanSieve(long maxValue)
@@ -59,8 +58,6 @@ public class BooleanSieve
 				if(!sieve[(int)(i / 2)])
 					for(long j=i*i; j <= maxValue; j += i * 2)
 						sieve[(int)(j / 2)] = true;
-//					for(long j=i; j * i <= maxValue; j += 2)
-//						sieve[(int)(i * j / 2)] = true;
 			
 			endTime = System.nanoTime();				
 			System.out.println("done.");
